@@ -14,9 +14,12 @@ def analyze():
     elif "happy" in user_text.lower():
         emotion = "Happy"
         strategy = "Keep a gratitude journal to capture this feeling."
+    elif "angry" in user_text.lower():
+        emotion = "Angry"
+        strategy = "Take a few minutes to cool down and practice mindfulness."
     else:
         emotion = "Neutral"
-        strategy = "Take a short walk to refresh your mind."
+        strategy = "Write down your thoughts to clear your mind."
 
     return jsonify({"emotion": emotion, "strategy": strategy})
 
